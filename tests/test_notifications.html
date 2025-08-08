@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Notifications API</title>
+</head>
+<body>
+    <h1>Test de API de Notificaciones</h1>
+    <button onclick="testNotifications()">Test Get Unread</button>
+    <pre id="result"></pre>
+    
+    <script>
+    async function testNotifications() {
+        try {
+            const response = await fetch('/ingles/notifications.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=get_unread'
+            });
+            
+            const text = await response.text();
+            document.getElementById('result').textContent = 'Response: ' + text;
+            
+            // Intentar parsear como JSON
+            try {
+                const json = JSON.parse(text);
+                console.log('JSON válido:', json);
+            } catch (e) {
+                console.error('No es JSON válido:', e);
+                console.log('Respuesta recibida:', text);
+            }
+        } catch (error) {
+            document.getElementById('result').textContent = 'Error: ' + error.message;
+        }
+    }
+    </script>
+</body>
+</html>

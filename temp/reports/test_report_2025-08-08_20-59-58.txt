@@ -1,0 +1,22 @@
+REPORTE DE PRUEBAS DEL SISTEMA
+====================================
+Fecha: 2025-08-08 20:59:58
+Total de Pruebas: 10
+Exitosas: 7
+Fallidas: 3
+Tasa de Éxito: 70%
+Tiempo Total: 128.81ms
+Estado: REQUIERE ATENCIÓN
+
+DETALLES DE PRUEBAS
+==================
+Conexión a Base de Datos      [PASS] 0.37ms - true
+Estructura de Archivos         [PASS] 1.53ms - true
+Tablas de Base de Datos        [FAIL] 3.89ms - false
+Funciones de Autenticación    [PASS] 0.01ms - true
+Registro de Usuario            [FAIL] 5.54ms - false
+Login de Usuario               [FAIL] 0.03ms - false
+Accesibilidad de Páginas      [PASS] 107.76ms - true
+Endpoints de API               [PASS] 5.04ms - true
+Configuración de Sesiones     [PASS] 0ms - true
+Permisos de Escritura          [PASS] 2.44ms - true
